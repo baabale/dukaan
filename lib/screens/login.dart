@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 },
                                 onSaved: (newValue) {
                                   if (newValue != null) {
-                                    value.username = newValue;
+                                    value.password = newValue;
                                   }
                                 },
                                 obscureText: value.hidePassword,
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: double.infinity,
                             height: 60,
                             child: ElevatedButton(
-                              onPressed: value.login,
+                              onPressed: () => value.login(context),
                               child: Text(
                                 'Log In',
                                 style: GoogleFonts.poppins(fontSize: 20),
