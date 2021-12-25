@@ -5,7 +5,10 @@ import 'package:provider/provider.dart';
 
 void main() => runApp(
       MultiProvider(
-        providers: [ChangeNotifierProvider.value(value: UserProvider())],
+        providers: [
+          ChangeNotifierProvider.value(value: UserProvider()),
+          ChangeNotifierProvider.value(value: ProductsProvider()),
+        ],
         child: DukaanApp(),
       ),
     );

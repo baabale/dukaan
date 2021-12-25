@@ -123,7 +123,8 @@ class _ProductScreenState extends State<ProductScreen> {
                           itemCount: 5,
                           itemBuilder: (context, index) => Padding(
                             padding: const EdgeInsets.only(right: 4),
-                            child: ProductCard(),
+                            // child: ProductCard(),
+                            child: Text('Product'),
                           ),
                         ),
                       ),

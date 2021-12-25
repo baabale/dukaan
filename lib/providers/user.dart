@@ -23,11 +23,11 @@ class UserProvider extends ChangeNotifier {
         if (formKey.currentState!.validate()) {
           final response = await http.post(
             Uri.parse(kEndPointUrl + 'users/login'),
-            headers: {"Content-Type": "application/json"},
-            body: jsonEncode({
+            // headers: {"Content-Type": "application/json"},
+            body: {
               'username': username,
               'password': password,
-            }),
+            },
           );
 
           if (response.statusCode == 200) {

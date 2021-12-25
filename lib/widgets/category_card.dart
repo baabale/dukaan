@@ -1,9 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/models/category.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard({Key? key}) : super(key: key);
+  const CategoryCard({Key? key, required this.category}) : super(key: key);
+
+  final Category category;
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +31,7 @@ class CategoryCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(50),
                   child: CachedNetworkImage(
-                    imageUrl:
-                        'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6428/6428997_sd.jpg',
+                    imageUrl: category.image,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -38,7 +40,7 @@ class CategoryCard extends StatelessWidget {
               Expanded(
                 child: Center(
                   child: Text(
-                    'Category Name',
+                    category.name,
                     style: GoogleFonts.poppins(fontSize: 10),
                     textAlign: TextAlign.center,
                     maxLines: 2,
