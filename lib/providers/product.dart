@@ -54,5 +54,6 @@ class ProductsProvider extends ChangeNotifier {
       print(e);
     }
     isProductLoading = false;
+    notifyListeners();
   }
 }

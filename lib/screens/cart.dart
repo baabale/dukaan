@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/widgets/cart_item.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
   static const String id = 'CartScreen';
+
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
